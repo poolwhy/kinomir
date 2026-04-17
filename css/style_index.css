@@ -1,0 +1,87 @@
+/* Основные стили для всей страницы */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #141414; /* Глубокий темный цвет как в Netflix */
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+/* Шапка с логотипом */
+header {
+    margin-bottom: 30px;
+}
+
+.logo {
+    width: 120px; /* Размер логотипа */
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(229, 9, 20, 0.4); /* Мягкое свечение */
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin: 0;
+    color: #e50914; /* Фирменный красный цвет кино */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Секция приветствия */
+.hero {
+    margin-bottom: 40px;
+}
+
+.hero h2 {
+    font-size: 1.8rem;
+    font-weight: 300;
+}
+
+.hero p {
+    color: #b3b3b3;
+    font-size: 1.1rem;
+}
+
+/* Кнопки */
+.auth-links {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+/* Кнопка регистрации (акцентная) */
+.btn[href="registr.php"] {
+    background-color: #e50914;
+    color: white;
+}
+
+.btn[href="registr.php"]:hover {
+    background-color: #f6121d;
+    transform: scale(1.05);
+}
+
+/* Кнопка входа (второстепенная) */
+.btn[href="vxod.php"] {
+    background-color: transparent;
+    color: white;
+    border: 1px solid #ffffff;
+}
+
+.btn[href="vxod.php"]:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: #e50914;
+}

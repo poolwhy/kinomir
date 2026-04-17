@@ -1,0 +1,129 @@
+/* Полный сброс отступов */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    background-color: #141414;
+    background-image: radial-gradient(circle at center, #2b2b2b 0%, #141414 100%);
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Контейнер профиля */
+.profile-container {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+}
+
+/* Верхний логотип */
+.logo {
+    width: 80px !important;
+    height: 80px !important;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 2px solid #e50914;
+    margin-bottom: 10px;
+}
+
+.logo-wrapper h2 {
+    color: #e50914;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-weight: 300;
+    color: #888;
+    margin-bottom: 30px;
+}
+
+/* Блок информации о пользователе */
+.user-info {
+    margin-bottom: 35px;
+}
+
+/* Аватар пользователя */
+.avatar {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    padding: 5px;
+    background: linear-gradient(45deg, #e50914, #ff4d4d);
+    box-shadow: 0 0 20px rgba(229, 9, 20, 0.4);
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #141414;
+}
+
+.user-info h4 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.user-info p {
+    color: #aaa;
+    font-size: 0.95rem;
+}
+
+/* Кнопки навигации */
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.nav-btn {
+    text-decoration: none;
+    padding: 14px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+/* Кнопка "Медиатека" */
+.nav-btn:not(.logout) {
+    background-color: #e50914;
+    color: white;
+}
+
+.nav-btn:not(.logout):hover {
+    background-color: #f6121d;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(229, 9, 20, 0.3);
+}
+
+/* Кнопка "Выйти" */
+.logout {
+    background: transparent;
+    color: #888;
+    border: 1px solid #444;
+}
+
+.logout:hover {
+    border-color: #ffffff;
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.05);
+}

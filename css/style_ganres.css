@@ -1,0 +1,99 @@
+/* 1. Базовые настройки страницы */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: radial-gradient(circle at center, #2b2b2b 0%, #141414 100%);
+    color: #fff;
+    padding: 40px 5%;
+}
+
+/* Заголовок страницы */
+.playlist-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #e50914;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-bottom: 50px;
+    border-bottom: 2px solid rgba(229, 9, 20, 0.3);
+    padding-bottom: 15px;
+}
+
+/* 2. Сетка жанров */
+/* Каждый жанр (h3) и его фильмы */
+h3 {
+    font-size: 1.8rem;
+    margin: 40px 0 20px 0;
+    color: #fff;
+    border-left: 5px solid #e50914;
+    padding-left: 15px;
+    clear: both; /* Чтобы жанры не накладывались друг на друга */
+}
+
+/* Контейнер для карточек внутри жанра */
+/* Поскольку в HTML фильмы идут просто списком, используем flex для выравнивания */
+.playlist-container, body {
+    display: block;
+}
+
+/* 3. Компактная карточка фильма */
+.movie-item {
+    background: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 180px; /* Компактная ширина */
+    display: inline-block; /* Ставит их в ряд */
+    vertical-align: top;
+    margin: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    text-decoration: none;
+}
+
+.movie-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(229, 9, 20, 0.4);
+}
+
+/* Скриншот (постер) */
+.screenshot {
+    width: 100%;
+    height: 250px; /* Фиксированная высота как на примере */
+    object-fit: cover;
+    display: block;
+    border-bottom: 3px solid #e50914;
+}
+
+/* Название фильма и год */
+.movie-item li {
+    list-style: none; /* Убираем точки списка */
+    padding: 12px 10px;
+    color: #141414; /* Темный текст на белом фоне */
+    font-size: 0.9rem;
+    font-weight: bold;
+    line-height: 1.3;
+    text-align: center;
+    min-height: 60px; /* Чтобы названия были в один уровень */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 4. Адаптивность */
+@media (max-width: 600px) {
+    .movie-item {
+        width: 140px;
+        margin: 5px;
+    }
+    .screenshot {
+        height: 190px;
+    }
+    .movie-item li {
+        font-size: 0.8rem;
+    }
+}

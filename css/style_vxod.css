@@ -1,0 +1,138 @@
+/* Основной фон всей страницы */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #141414; /* Глубокий темный */
+    background-image: radial-gradient(circle at center, #2b2b2b 0%, #141414 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #ffffff;
+}
+
+/* Контейнер формы с эффектом матового стекла */
+.login-container {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%;
+    max-width: 380px;
+    text-align: center;
+}
+
+/* Логотип (теперь он будет нормального размера!) */
+.logo {
+    width: 100px;
+    height: 100px;
+    object-fit: cover; /* Чтобы фото Эминема не сплющило */
+    border-radius: 50%;
+    border: 3px solid #e50914; /* Красная рамка под стиль кино */
+    margin-bottom: 10px;
+}
+
+.logo-wrapper h2 {
+    color: #e50914;
+    margin: 0 0 20px 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+h3 {
+    font-weight: 300;
+    color: #ccc;
+    margin-bottom: 25px;
+}
+
+/* Группировка полей */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+/* Инпуты */
+input {
+    width: 100%;
+    padding: 12px 15px;
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid #444;
+    border-radius: 8px;
+    color: #fff;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    border-color: #e50914;
+    background: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 0 8px rgba(229, 9, 20, 0.2);
+}
+
+/* Кнопка "Войти" */
+.login-btn {
+    width: 100%;
+    padding: 14px;
+    background-color: #e50914;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    margin-top: 10px;
+}
+
+.login-btn:hover {
+    background-color: #f6121d;
+    transform: translateY(-2px);
+}
+
+.login-btn:active {
+    transform: translateY(0);
+}
+
+/* Ошибка */
+.error-message {
+    background: rgba(229, 9, 20, 0.15);
+    color: #ff4d4d;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #e50914;
+    margin-bottom: 20px;
+    font-size: 0.85rem;
+    display: none; /* Управляется твоим JS */
+}
+
+/* Ссылка на регистрацию */
+.register-link {
+    margin-top: 25px;
+    font-size: 0.9rem;
+    color: #888;
+}
+
+.register-link a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 1px solid #e50914;
+    padding-bottom: 2px;
+    transition: color 0.3s;
+}
+
+.register-link a:hover {
+    color: #e50914;
+}
