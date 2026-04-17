@@ -20,7 +20,7 @@
                 <img src="https://avatars.mds.yandex.net/i?id=3436f743c6094597735fca121b70a057e7b44b7b-10649741-images-thumbs&n=13" alt="Аватар">
             </div>
             <h4>Добро пожаловать!</h4>
-            <p>Вы успешно вошли в свой аккаунт</p>
+            <p>Вы успешно вошли в свой аккаунт!</p>
         </div>
         
         <div class="nav-links">
